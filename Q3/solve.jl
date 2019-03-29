@@ -12,7 +12,7 @@ k_El = v_l/peptide_length;                      #1/hr
 number_of_simulation_points = 1000;
 inducer_array = collect(exp10.(range(-4,stop=1,length=number_of_simulation_points)));
 simulated_mRNA_concentration = zeros(length(inducer_array),4);
-protein_concentration = zeros(number_of_simulation_points);
+protein_flux = zeros(number_of_simulation_points);
 flux = zeros(number_of_simulation_points,number_of_fluxes);
 
 for step_index = 1:number_of_simulation_points
@@ -44,16 +44,16 @@ for step_index = 1:number_of_simulation_points
     simulated_mRNA_concentration[step_index,3] = u_value
     simulated_mRNA_concentration[step_index,4] = protein_level
 
-    protein_level = objective_value/kd_l;
-    protein_concentration[step_index] = protein_level;
+    protein_production = objective_value;
+    protein_flux[step_index] = protein_production;
     flux[step_index,:].=calculated_flux_array;
 end
 # 1d Make a plot - mRNA (y-axis) versus I (x-axis) -
-semilogx(simulated_mRNA_concentration[:,1],protein_concentration[1:end],color="blue",lw=1)
+semilogx(simulated_mRNA_concentration[:,1],protein_flux[1:end],color="blue",lw=1)
 
 # label the axes -
 xlabel("Inducer [mM]",fontsize=12)
-ylabel("Optimized protein production, [uM/hr]",fontsize=12)
+ylabel("Optimized protein production [uM/hr]",fontsize=12)
 title("Cell Free Protein Synthesis")
 savefig("Q3.pdf")
 gcf()
