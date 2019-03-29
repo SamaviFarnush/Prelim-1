@@ -10,6 +10,8 @@ tau_x           = 2.7;           #dimensionless
 tau_l           = 0.8;           #dimensionless
 kd_x            = 8.35;          #1/h
 kd_l            = 9.9*10^-3;     #1/h
+LX              = 1000;          #nt
+LT              = 330;           #aa
 peptide_length  = 308;           #aa
 gene_length     = 924;           #nt
 W1              = 0.26;
@@ -17,8 +19,9 @@ W2              = 300;
 K               = 0.3;           #mM
 n               = 1.5;
 
-a=1;
-n=1;
+
+a=2;
+n=2;
 
 stoichiometric_matrix = [
 #    v1  v2  v3  v4  v5  v6  b1  b2  b3  b4  b5  b6  b7  b8  b9
