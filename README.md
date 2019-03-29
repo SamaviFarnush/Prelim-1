@@ -1,7 +1,9 @@
-Q1
+#Prelim 1
+
+#Q1
 -Answer can be found in the ChemE 7770_Samavi_Prelim_1.pdf (pg 2-3)
 
-Q2
+#Q2
 -Instuction for running the code
 	-Download "Q2.m" "model.m" "getparam.m" from Q2\~ in the same directory
 	-Run Q2.m from MATLAB
