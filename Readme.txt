@@ -16,5 +16,6 @@ Instuction for running the code
 	Set Julia working directory as the one containing the files.
 	In the julia console, run 
 			include("solve.jl")
-	The code will generate a plot of protein level  vs inducer concentration on semi-log scale.
+	The code will generate a plot of protein level  vs inducer concentration on semi-log scale. Plots for a=n=1 and a=n=2 are also 		attached in "Q3.pdf" and "Q3a.pdf".
 	The code will generate a “flux.csv” file with optimized fluxes with varying levels of inducer. 
+	
